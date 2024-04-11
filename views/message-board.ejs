@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大家的留言</title>
+    <style>
+        .mar{
+            margin-top:10px; margin-bottom: 10px ;
+        }
+        .btn{
+            border: 5px solid lightblue; border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h3>留言版</h3>
+    <form action="/message" method="POST">
+        <div>
+            哈囉 <%= name%>，在這裡輸入留言跟大家聊天吧
+        </div>
+        <div>
+            <p>寫下留言: </p>
+            <textarea class="form-control" rows="5" id="comment" name="message"></textarea>          
+        </div>
+        <input class="btn mar" type="submit" value="送出留言">
+    </form>
+    <div>
+        <a href="/logout">按我會員登出</a>
+    </div>
+    <h3>留言紀錄</h3>
+    <div class="overflow:auto">
+    <% for(let i=0; i<data.length; i++){ %>
+        <div class="mar">
+            <div>留言者:<%= data[i].name %></div>
+            <div>留言內容:<%= data[i].message %></div>
+            <div>留言時間:<%= data[i].timelock %></div>
+            <hr/>
+        </div>
+    <% } %>
+    </div>
+</body>
+</html>

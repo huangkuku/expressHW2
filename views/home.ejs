@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首頁</title>
+</head>
+<body>
+    <h3>註冊會員</h3>
+    <form action="/signin" method="POST">
+    <div>
+        你的名字:<input type="text" name="name"></input><br/>
+        電子信箱:<input type="text" name="email"></input><br/>
+        設定密碼:<input type="password" name="password"></input><br/>
+    </div>
+    <input type="submit" value="立即註冊"></input>
+    </form>
+    <h3>登入會員</h3>
+    <form action="/login" method="POST">
+    <div>
+        電子信箱:<input type="text" name="email"></input><br/>
+        你的密碼:<input type="password" name="password"></input><br/>
+    </div>
+    <input type="submit" value="登入會員"></input>
+    </form>
+</body>
+</html>
